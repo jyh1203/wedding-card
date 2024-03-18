@@ -9,9 +9,9 @@
 
 ## 예식정보
 
-* 날짜 : 2019년 5월 18일 14시 30분
-* 장소 : 부산광역시 해운대구 센텀시티 센텀사이언스파크 23층
-* 청첩장 url : https://andersonchoi.github.io/wedding-card/
+* 날짜 : 2024년 7월 6일 12시 30분
+* 장소 : 서울 강서구 마곡중앙5로 6 보타닉푸르지오시티 L층(로비층) 오키드홀
+* 청첩장 url : https://jyh1203.github.io/wedding-card/
 
 ## 축하의 말
 
