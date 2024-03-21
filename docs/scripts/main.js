@@ -6,7 +6,6 @@
 
 
 
-
 $(document).ready(function () {
     $("#map-image").on("click")
     {
@@ -84,3 +83,4 @@ $("a.smooth-scroll").click(function (event) {
         }
     }
 });
+
