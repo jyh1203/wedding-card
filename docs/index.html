@@ -123,6 +123,55 @@
                             <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
                                 장용현</h3>
                             <img alt="Bride" class="img-fluid" src="images/groom.jpg"/>
+
+                            <p></p>
+                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">연락하기</button>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">연락하기</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <td>신랑</td>
+                    <td>장용현</td>
+                    <td><a href="tel:123-456-7890">123-456-7890</a>📱</td>
+                  </tr>
+                  <tr>
+                    <td>신랑 아버지</td>
+                    <td>장용현</td>
+                    <td><button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">📱</button></td>
+                  </tr>
+                  <tr>
+                    <td>신랑 어머니</td>
+                    <td>장용현</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">전화</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
                         </div>
                     </div>
                     <div class="col-6">
@@ -130,6 +179,8 @@
                             <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
                                 류현정</h3>
                             <img alt="Groom" class="img-fluid" src="images/bride.jpg"/>
+                            <p></p>
+                            <button type="button" class="btn btn-outline-primary">연락하기</button>
                         </div>
                     </div>
 
@@ -344,7 +395,6 @@
             </div>
         </div>
 
-
         
     </div>
 </div>
@@ -363,41 +413,24 @@
     
           document.getElementById("count").innerHTML = "D-DAY까지 " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초 남았습니다.";
     }, 1000);
+
+
+
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+    })
     </script>
 
 
-
-
 <footer></footer>
-
-
-
-
-
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/aos.js"></script>
 <script src="js/parallax.min.js"></script>
-<script src="js/ekko-lightbox.min.js"></script>
-<script src="scripts/main.js"></script>
-
-<div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
-</div>
-
-<div class="bottom_left">
-    <audio id="player" src="mus.mp3"></audio>
-    <div>
-        <i class="fa fa-music fa-2x" onclick="document.getElementById('player').play()"></i>
-    </div>
-</div>
-
-</body>
-cript>
 <script src="js/ekko-lightbox.min.js"></script>
 <script src="scripts/main.js"></script>
 
