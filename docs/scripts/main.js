@@ -4,48 +4,40 @@
 
 
 
-
-
-$(document).ready(function () {
-    $("#map-image").on("click")
-    {
-
-    }
-
-    $('#go-to-top').click(function () {
-        $('html,body').animate({scrollTop: 0}, 400);
-        return false;
+// 내비바가 다른데 터치하면 닫히도록 하는 기능
+$(function () {         
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("navbar-collapse collapse show");
+        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+            $("button.navbar-toggler").click();
+        }
     });
-
-    $(".gift-send").click(function () {
-        $("#gift-name").text($(this).data("name"));
-    })
+});
 
 
-    $("#reserveGiftButton").click(function () {
-        let name = $("#sender-name").val();
-        let message = $("#sender-message").val();
-        $("#reserveGiftButton").text("전송중...");
-        $("#reserveGiftButton").prop("disabled", true);
 
-        emailjs.init("user_yjLL5xG0A3kkOCH5BGIDh");
-        emailjs.send("wedding-mail", "gift_send", {
-            name: name,
-            gift: $("#gift-name").text(),
-            message: message
-        }).then(function (response) {
-            $('#giftMailModal').modal('hide');
-            alert(name + "님의 메시지가 정상적으로 전송되었습니다.");
 
-            $("#reserveGiftButton").text("예약하기!");
-            $("#sender-name").val('');
-            $("#sender-message").val('');
-            $("#reserveGiftButton").prop("disabled", false);
-        }, function (err) {
-            alert("메시지 전송이 실패했습니다. 다시 시도해주세요.");
-        });
-    })
-})
+
+document.querySelectorAll('button[data-type="copy"]')
+  .forEach(function(button){
+      button.addEventListener('click', function(){
+      let email = this.parentNode.parentNode
+        .querySelector('td[data-type="email"]')
+        .innerText;
+      
+      let tmp = document.createElement('textarea');
+          tmp.value = email;
+          tmp.setAttribute('readonly', '');
+          tmp.style.position = 'absolute';
+          tmp.style.left = '-9999px';
+          document.body.appendChild(tmp);
+          tmp.select();
+          document.execCommand('copy');
+          document.body.removeChild(tmp);
+          console.log(`${email} copied.`);
+    });
+});
 
 // Smooth scroll for links with hashes
 $("a.smooth-scroll").click(function (event) {
@@ -84,3 +76,29 @@ $("a.smooth-scroll").click(function (event) {
     }
 });
 
+
+
+
+
+(function()         //클립보드 저장 기능
+{
+  let buttons = document.getElementsByTagName('Button');
+  for(let i = 0; i < buttons.length; i++)
+  {
+    let button = buttons[i];
+    button.addEventListener('click', e =>
+    {
+      let button = e.target;
+      let bankinfo = button.parentNode.parentNode.getElementsByClassName('bankinfo')[0].innerHTML;
+      let text = document.createElement('input');
+      text.setAttribute('type', 'text');
+      text.value = bankinfo;
+      document.body.appendChild(text);
+      text.select();
+      document.execCommand('copy');
+      alert("계좌번호("+bankinfo+")가 클립보드에 복사되었습니다");
+      document.body.removeChild(text);
+      
+    });
+  }
+})();
