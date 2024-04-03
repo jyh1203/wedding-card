@@ -6030,6 +6030,7 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 750px;
 }
 .carousel-inner::after {
   display: block;
@@ -6038,7 +6039,7 @@ textarea.form-control-lg {
 }
 
 .carousel-item {
-  position: relative;
+  position: absolute;
   display: none;
   float: left;
   width: 100%;

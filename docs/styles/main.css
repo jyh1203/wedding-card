@@ -6182,10 +6182,11 @@ button.close {
     position: relative;
     width: 100%;
     overflow: hidden;
+    height: 653px;
 }
 
 .carousel-item {
-    position: relative;
+    position: absolute;
     display: none;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6205,6 +6206,9 @@ button.close {
 .carousel-item-next,
 .carousel-item-prev {
     display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-item-next,
